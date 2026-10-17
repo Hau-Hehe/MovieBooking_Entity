@@ -23,7 +23,7 @@ public class BookingController {
     }
 
     @GetMapping("/getuserbookings/{id}")
-    public ResponseEntity<List<Booking>> getUserBooking(@PathVariable Long id) {
+    public ResponseEntity<List<Booking>> getUserBookings(@PathVariable Long id) {
         return ResponseEntity.ok(bookingService.getUserBookings(id));
     }
 
@@ -42,8 +42,8 @@ public class BookingController {
         return ResponseEntity.ok(bookingService.cancelBooking(id));
     }
 
-    @GetMapping("/getbookingsbystatus/{bookingStatus}")
-    public ResponseEntity<List<Booking>> getBookingsByStatus(@PathVariable BookingStatus bookingStatus){
-        return ResponseEntity.ok(bookingStatus.getBookingsByStatus(bookingStatus));
-    }
+//    @GetMapping("/getbookingsbystatus/{bookingStatus}")
+//    public ResponseEntity<List<Booking>> getBookingsByStatus(@PathVariable BookingStatus bookingStatus){
+//        return ResponseEntity.ok(bookingStatus.getBookingsByStatus(bookingStatus));
+//    }
 }
