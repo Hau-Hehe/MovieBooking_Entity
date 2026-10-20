@@ -15,6 +15,8 @@ public class JWTService {
 
     @Value("${jwt.secret}")
     private String secretKey;
+
+    @Value("${jwt.expiration}")
     private Long jwtExpiration;
 
     public String extractUsername(String jwtToken) {
